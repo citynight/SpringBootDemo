@@ -46,14 +46,15 @@
     2.1 编写Servlet
     ```
     /*SpringBoot 整合Servlet方式二*/
-public class SecondServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("SecondServlet -----");
+    public class SecondServlet extends HttpServlet {
+        @Override
+        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+            System.out.println("SecondServlet -----");
+        }
     }
-}
     ```
     2.2 编写启动类
+    
     ```
             @SpringBootApplication
         public class App2 {
