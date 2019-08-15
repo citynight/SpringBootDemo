@@ -43,7 +43,9 @@
     }
     ```
 2. 通过方法完成Servlet组件注册
+
     2.1 编写Servlet
+    
     ```
     /*SpringBoot 整合Servlet方式二*/
     public class SecondServlet extends HttpServlet {
