@@ -73,7 +73,7 @@
     
 ## 整合Filter
 1. 通过注解扫描完成Filter组件的注册
-        1. 编写Filter
+    1. 编写Filter
         ```
             import java.io.IOException;
             import javax.servlet.*;
@@ -113,7 +113,7 @@
                 }
         ```
         
-        1. 编写启动类
+    2. 编写启动类
         ```
         @SpringBootApplication
         @ServletComponentScan
@@ -124,8 +124,8 @@
             }
         }
         ```
-    2. 通过方法完成Filter组件的注册
-        1. 编写filter
+2. 通过方法完成Filter组件的注册
+    1. 编写filter
         ```
             public class SecondFilter implements Filter {
                 @Override
@@ -146,8 +146,8 @@
                 }
             }
         ```
-        
-        2. 编写启动类
+    
+    2. 编写启动类
         
         ```
             @SpringBootApplication
