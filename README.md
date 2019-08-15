@@ -4,7 +4,9 @@
 
 ## 整合Servlet
 1. 通过注解扫描完成Servlet组件注册
+
     1.1 编写Servlet
+    
     ```
     /*SpringBoot 整合Servlet方式一
         * 原来xml中的配置信息
