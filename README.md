@@ -42,7 +42,7 @@
         
     }
     ```
-1. 通过方法完成Servlet组件注册
+2. 通过方法完成Servlet组件注册
     2.1 编写Servlet
     ```
     /*SpringBoot 整合Servlet方式二*/
@@ -71,7 +71,7 @@
     ```
     
     
-    ##整合Filter
+##整合Filter
     1. 通过注解扫描完成Filter组件的注册
         1. 编写Filter
         ```
@@ -124,7 +124,7 @@
             }
         }
         ```
-    1. 通过方法完成Filter组件的注册
+    2. 通过方法完成Filter组件的注册
         1. 编写filter
         ```
             public class SecondFilter implements Filter {
