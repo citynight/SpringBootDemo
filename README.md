@@ -130,6 +130,7 @@
         }
         ```
 2. 通过方法完成Filter组件的注册
+    
     1. 编写filter
         ```
             public class SecondFilter implements Filter {
@@ -177,5 +178,74 @@
                     return bean;
                 }
             }
+
+        ```
+
+
+## 整合Listener
+
+1. 通过注解扫描完成Listener组件注册
+
+    1. 编写listener
+
+        ```
+        /*
+            *
+            * <listener>
+            *     <listener-class>
+            *         cn.citynight.listener.FirstLinstener
+            *     </listener-class>
+            * </listener>
+            *
+            * */
+            @WebListener
+            public class FirstListener implements ServletContextListener {
+                @Override
+                public void contextInitialized(ServletContextEvent sce) {
+                    System.out.println("Listener.....init....");
+                }
+            }
+        
+        ```
+    2. 编写启动器
+
+        ```
+        @SpringBootApplication
+        @ServletComponentScan
+        public class App {
+        
+            public static void main(String[] args) {
+                SpringApplication.run(App.class,args);
+            }
+        }
+        ```
+    
+1. 通过方法完成Listener组件注册
+
+    1. 编写listener
+
+        ```
+        public class SecondListener implements ServletContextListener {
+            @Override
+            public void contextInitialized(ServletContextEvent sce) {
+                System.out.println("SecondListener init----------");
+            }
+        }
+        ```
+    2. 编写启动类
+
+        ```
+        @SpringBootApplication
+        public class App2 {
+            public static void main(String[] args) {
+                SpringApplication.run(App2.class,args);
+            }
+        
+            @Bean
+            public ServletListenerRegistrationBean<SecondListener> getServletListenerRegistrationBean() {
+                ServletListenerRegistrationBean<SecondListener> bean = new ServletListenerRegistrationBean(new SecondListener());
+                return bean;
+            }
+        }
 
         ```
