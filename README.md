@@ -249,3 +249,9 @@
         }
 
         ```
+
+
+## 访问静态资源
+
+1. SpringBoot从`classpath/static` 的目录
+    注意目录名称必须是`static`
