@@ -255,3 +255,67 @@
 
 1. SpringBoot从`classpath/static` 的目录
     注意目录名称必须是`static`
+    
+    ![](https://github.com/lxzzzzzz/SpringBootDemo/blob/master/WX20190816-144158@2x.png)
+    
+1. ServletContent 根目录下
+ 在`src/main/webapp`目录名称也必须要叫做`webapp`
+
+
+## 文件上传
+1. 编写上传页面
+    
+    ```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>文件上传</title>
+    </head>
+    <body>
+        <form action="fileUploadController" method="post" enctype="multipart/form-data">
+            上传文件： <input type="file" name="filename"/>
+            <br/>
+            <input type="submit"/>
+        </form>
+    </body>
+    </html>
+    ```
+    
+    1. 编写Controller
+    
+    ```
+    /*
+    *
+    * SpringBoot 文件上传
+    *
+    * */
+    //@Controller
+    @RestController // 表示该类下的方法的返回值会自动做json格式的转换
+    public class FileUploadController {
+        /*
+        * filename的名字要和HTML中的filename一致
+        * RequestMapping中的path跟HTML中的action一致
+        * */
+        @RequestMapping("/fileUploadController")
+        public Map<String,Object> fileUpload(MultipartFile filename) throws IOException {
+            System.out.println(filename.getOriginalFilename());
+            File file = new File("/Users/lixiaozheng/Desktop/UploadData/" + filename.getOriginalFilename());
+            filename.transferTo(file);
+            Map<String,Object> map = new HashMap<>();
+            map.put("msg","ok");
+            return map;
+    
+        }
+    }
+    ```
+    
+    1. 设置上传文件大小的默认值
+        1. 需要添加一个SpringBoot的配置文件，配置文件名称为`application.properties`, 配置文件必须要放在`src/main/resources` 下
+        文件的中的配置项如下：
+        ```
+        #上传文件的大小设置为最大200MB
+        spring.servlet.multipart.max-file-size=200MB
+        #上传文件的总大小
+        spring.servlet.multipart.max-request-size=200MB
+        ```
