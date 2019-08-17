@@ -451,3 +451,31 @@
         </c:forEach>
     </table>
     ```
+    
+    
+## 整合Freemarker
+1. 创建项目
+pom 文件如下
+
+```
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.6.RELEASE</version>
+    </parent>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--freemarker 启动器的坐标-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+    </dependencies>
+```
+
+其他的参考上一个项目
+
+## 整合thymeleaf
