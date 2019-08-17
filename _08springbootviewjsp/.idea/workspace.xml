@@ -122,8 +122,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-13" />
-    <option name="y" value="167" />
+    <option name="x" value="454" />
+    <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="988" />
   </component>
@@ -337,16 +337,15 @@
       <updated>1565952429045</updated>
       <workItem from="1565952430309" duration="5047000" />
       <workItem from="1566008022419" duration="187000" />
-      <workItem from="1566025780283" duration="682000" />
+      <workItem from="1566025780283" duration="739000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5916000" />
+    <option name="totallyTimeSpent" value="5973000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="167" width="1920" height="988" extended-state="0" />
-    <editor active="true" />
+    <frame x="454" y="23" width="1920" height="988" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -368,8 +367,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32949308" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32949308" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32949308" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />

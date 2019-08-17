@@ -479,3 +479,85 @@ pom 文件如下
 其他的参考上一个项目
 
 ## 整合thymeleaf
+### thymeleaf创建
+1. 修改 pom 文件
+    ```
+        <parent>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-parent</artifactId>
+            <version>2.1.6.RELEASE</version>
+        </parent>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+            </dependency>
+    
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            </dependency>
+        </dependencies>
+    ```
+    
+1. 创建目录
+ 位置:`src/main/resources/templates`
+ templates 该目录是安全的,,意味着该目录下的内容是不允许外界直接访问的.
+
+### thymeleaf的基本使用
+1. thymeleaf 的特点
+    thymeleaf 是通过它特定的语法对 HTML 的标记做渲染
+    
+2. 编写 Controller
+
+    ```
+    /*thymeleaf 入门案例*/
+    @Controller
+    public class DemoController {
+        @RequestMapping("/show")
+        public String showInfo(Model model) {
+            model.addAttribute("msg","thymeleaf 第一个案例");
+            return "index";
+        }
+    }
+    
+    ```
+
+1. 创建视图
+    ```
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>thymeleaf 入门</title>
+        
+        </head>
+        <body>
+        
+        <span th:text="Hello">
+        </span>
+        <hr/>
+        
+        <span th:text="${msg}}"></span>
+        
+        </body>
+    </html>
+    ```
+    
+1. 编写启动类
+    ```
+        
+    @SpringBootApplication
+    public class App {
+    
+        public static void main(String[] args) {
+            SpringApplication.run(App.class,args);
+        }
+    }
+    ```
+    
+1. 名词解释
+    `th:text`: 在页面中输出值
+    
+    
+    
+    
