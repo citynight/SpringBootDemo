@@ -424,12 +424,15 @@
 3. 根据配置文件创建目录
     在`src/main/`下创建`webapp`,在`webapp`中创建`WEB-INFO`,并在`WEB-INFO`中创建`jsp`文件夹,文件夹中创建`userList.asp` 文件名`userList`是上一步控制器中的方法返回值
     `jsp`文件的开头需要引入
+   
     ```
     <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     
     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     ```
+    
 1. `jsp`中的`body`代码如下
+   
     ```
     <table border="1" align="center" width="50%">
 
