@@ -436,18 +436,18 @@
     ```
     <table border="1" align="center" width="50%">
 
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Age</th>
-    </tr>
-
-    <c:forEach items="${list}" var="user">
         <tr>
-            <td>${user.userId}</td>
-            <td>${user.username}</td>
-            <td>${user.userAge}</td>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
         </tr>
-    </c:forEach>
-</table>
+    
+        <c:forEach items="${list}" var="user">
+            <tr>
+                <td>${user.userId}</td>
+                <td>${user.username}</td>
+                <td>${user.userAge}</td>
+            </tr>
+        </c:forEach>
+    </table>
     ```
