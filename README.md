@@ -557,7 +557,7 @@ pom 文件如下
     
 1. 名词解释
     `th:text`: 在页面中输出值
-    
+    `th:value`: 可以将一个值放入到 input 标签的 value 中.
     
     
     
